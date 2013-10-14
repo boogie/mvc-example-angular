@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>Angular example</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -39,7 +39,7 @@
         <h3 class="text-muted">Angular example</h3>
     </div>
 
-    <article id="main" ui-view="">
+    <article id="main" ui-view>
     </article>
 
     <div class="footer">
@@ -47,8 +47,19 @@
         <br />
         See my related presentation: <a href="https://prezi.com/sxv2t_nambyd/client-side-mvc-backbonemarionette-ember-angular/">Client side MVC: Backbone+Marionette, Ember, Angular</a>
     </div>
-
 </div>
+<div class="modal fade in">
+    <div class="modal-dialog" id="modal-contents">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" aria-hidden="true" back-button>&times;</button>
+                <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body" ui-view="modal"></div>
+        </div>
+    </div>
+</div>
+<div class="modal-backdrop fade in"></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -89,9 +100,10 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/directives/navTabs.js"></script>
+        <script src="scripts/directives/backButton.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/user.js"></script>
-        <script src="scripts/controllers/user_results.js"></script>
+        <script src="scripts/controllers/user_card.js"></script>
         <!-- endbuild -->
 </body>
 </html>

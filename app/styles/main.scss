@@ -36,11 +36,27 @@ body {
     margin: 30px 0;
 }
 
+.table-clickable tbody tr {
+    cursor: pointer;
+}
+
+
 /* Main */
 
 #main {
     margin: 20px 0;
 }
+
+/* Modal */
+
+.modal-backdrop {
+    display: none;
+}
+body.modal-open {
+    .modal, .modal-dialog, .modal-backdrop {
+        display: block;
+    }
+} 
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
